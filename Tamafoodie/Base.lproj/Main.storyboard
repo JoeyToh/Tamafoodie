@@ -14,16 +14,6 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="tama" translatesAutoresizingMaskIntoConstraints="NO" id="8Dt-of-tzg">
-                                <rect key="frame" x="82" y="155" width="293" height="244"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="foodie" translatesAutoresizingMaskIntoConstraints="NO" id="bQi-NK-mMU">
-                                <rect key="frame" x="25" y="222" width="334" height="210"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" red="0.5314941406" green="0.81154364349999997" blue="0.94604319329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -33,8 +23,4 @@
             <point key="canvasLocation" x="138.40000000000001" y="117.48768472906404"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="foodie" width="1890" height="1417"/>
-        <image name="tama" width="1890" height="1417"/>
-    </resources>
 </document>
