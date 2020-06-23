@@ -75,6 +75,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4LZ-Dt-YW1" kind="presentation" modalPresentationStyle="fullScreen" id="fAI-Iv-rOl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a new user? Click here to sign up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-Cn-cXQ">
                                 <rect key="frame" x="27.666666666666657" y="689" width="320" height="21"/>
@@ -251,10 +254,10 @@
             </objects>
             <point key="canvasLocation" x="918" y="-273"/>
         </scene>
-        <!--View Controller-->
+        <!--Select character screen (bunny)-->
         <scene sceneID="nHH-LW-gKe">
             <objects>
-                <viewController id="jrD-3p-jh6" sceneMemberID="viewController">
+                <viewController title="Select character screen (bunny)" id="jrD-3p-jh6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ffV-aW-s0f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -317,7 +320,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="4LZ-Dt-YW1" kind="presentation" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="3Lq-WB-xEZ"/>
+                                    <segue destination="4LZ-Dt-YW1" kind="presentation" modalPresentationStyle="fullScreen" id="3Lq-WB-xEZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -333,20 +336,33 @@
             </objects>
             <point key="canvasLocation" x="1724" y="-273"/>
         </scene>
-        <!--View Controller-->
+        <!--Main screen-->
         <scene sceneID="INa-Uf-zwE">
             <objects>
-                <viewController id="4LZ-Dt-YW1" sceneMemberID="viewController">
+                <viewController title="Main screen" id="4LZ-Dt-YW1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stk-eD-qXg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="floor+wall" translatesAutoresizingMaskIntoConstraints="NO" id="LvE-Bo-53z">
-                                <rect key="frame" x="-342" y="-988" width="1125" height="2436"/>
+                                <rect key="frame" x="-342" y="-988" width="1090" height="2463"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="drawer" translatesAutoresizingMaskIntoConstraints="NO" id="SVK-yf-KDx">
-                                <rect key="frame" x="16" y="449" width="110" height="134"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="UJO-Wp-R0H">
+                                <rect key="frame" x="-23" y="152" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whalepainting" translatesAutoresizingMaskIntoConstraints="NO" id="bYl-5K-Xgr">
+                                <rect key="frame" x="191" y="152" width="168" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yml-Tk-0uN">
+                                <rect key="frame" x="87" y="89" width="134" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.65000000000000002" y="0.0" width="1" height="1"/>
+                            </progressView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Utf-VW-W4h">
+                                <rect key="frame" x="67" y="403" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -358,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="1820" y="461.82266009852219"/>
         </scene>
-        <!--View Controller-->
+        <!--Select character screen (Dog)-->
         <scene sceneID="Xrj-oA-jWU">
             <objects>
-                <viewController id="wRs-Am-vZe" sceneMemberID="viewController">
+                <viewController title="Select character screen (Dog)" id="wRs-Am-vZe" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAk-ed-q9l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -419,6 +435,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4LZ-Dt-YW1" kind="presentation" modalPresentationStyle="fullScreen" id="SAj-gq-HjD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53024363519999995" green="0.8086981177" blue="0.94904083009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -433,10 +452,10 @@
             </objects>
             <point key="canvasLocation" x="2438" y="-273"/>
         </scene>
-        <!--View Controller-->
+        <!--Select character screen (hamster)-->
         <scene sceneID="FBg-to-70f">
             <objects>
-                <viewController id="60W-jG-DoX" sceneMemberID="viewController">
+                <viewController title="Select character screen (hamster)" id="60W-jG-DoX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b8m-Mc-b5i">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -494,6 +513,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="4LZ-Dt-YW1" kind="presentation" modalPresentationStyle="fullScreen" id="GQ3-Do-mga"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.53024363519999995" green="0.8086981177" blue="0.94904083009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -510,19 +532,21 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BBJ-xo-ZR7"/>
-        <segue reference="xjM-3C-tyI"/>
-        <segue reference="SiX-XC-V5V"/>
+        <segue reference="33j-h3-aMF"/>
+        <segue reference="oUz-GN-gzr"/>
+        <segue reference="GQ3-Do-mga"/>
+        <segue reference="6ed-Lm-TXf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowleft" width="120" height="210"/>
         <image name="arrowright" width="120" height="210"/>
         <image name="bunny" width="480" height="570"/>
+        <image name="clock" width="400" height="400"/>
         <image name="dog" width="630" height="750"/>
-        <image name="drawer" width="420" height="390"/>
         <image name="floor+wall" width="1125" height="2436"/>
         <image name="foodie" width="1770" height="270"/>
         <image name="hamster" width="690" height="750"/>
         <image name="tama" width="1170" height="270"/>
+        <image name="whalepainting" width="823" height="889"/>
     </resources>
 </document>
