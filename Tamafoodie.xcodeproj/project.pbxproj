@@ -3,12 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1D7F4560AC002E9132C558BD /* Pods_Tamafoodie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147FDB8192A481CF6C830E4 /* Pods_Tamafoodie.framework */; };
-		B86CE71124A527C500FD3432 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B86CE71024A527C500FD3432 /* GoogleService-Info.plist */; };
+		B828EA7424A534260048FCCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B828EA7324A534260048FCCE /* GoogleService-Info.plist */; };
 		D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */; };
 		D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56D24A50B4F009320D0 /* MainScreen.swift */; };
 		D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		8147FDB8192A481CF6C830E4 /* Pods_Tamafoodie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tamafoodie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1FD95553FD1805C9C9866 /* Pods-Tamafoodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tamafoodie.debug.xcconfig"; path = "Target Support Files/Pods-Tamafoodie/Pods-Tamafoodie.debug.xcconfig"; sourceTree = "<group>"; };
-		B86CE71024A527C500FD3432 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B828EA7324A534260048FCCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterScreen.swift; sourceTree = "<group>"; };
 		D415F56D24A50B4F009320D0 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D497E128249A3CDA0052BDE1 /* Tamafoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamafoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,6 @@
 				94A1FD95553FD1805C9C9866 /* Pods-Tamafoodie.debug.xcconfig */,
 				F4E0F5B5D0B72B6109A1D335 /* Pods-Tamafoodie.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -108,7 +107,7 @@
 				D4E1AEC424A5228600E1C273 /* GymScreen.swift */,
 				D4E1AEC624A5229300E1C273 /* VetScreen.swift */,
 				D497E139249A3CDB0052BDE1 /* Info.plist */,
-				B86CE71024A527C500FD3432 /* GoogleService-Info.plist */,
+				B828EA7324A534260048FCCE /* GoogleService-Info.plist */,
 			);
 			path = Tamafoodie;
 			sourceTree = "<group>";
@@ -174,8 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D497E138249A3CDB0052BDE1 /* LaunchScreen.storyboard in Resources */,
-				B86CE71124A527C500FD3432 /* GoogleService-Info.plist in Resources */,
 				D497E135249A3CDB0052BDE1 /* Assets.xcassets in Resources */,
+				B828EA7424A534260048FCCE /* GoogleService-Info.plist in Resources */,
 				D497E133249A3CDA0052BDE1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
