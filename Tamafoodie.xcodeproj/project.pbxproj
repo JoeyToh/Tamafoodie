@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */; };
+		D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56D24A50B4F009320D0 /* MainScreen.swift */; };
 		D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */; };
 		D497E12E249A3CDA0052BDE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */; };
 		D497E130249A3CDA0052BDE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12F249A3CDA0052BDE1 /* ViewController.swift */; };
 		D497E133249A3CDA0052BDE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D497E131249A3CDA0052BDE1 /* Main.storyboard */; };
 		D497E135249A3CDB0052BDE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D497E134249A3CDB0052BDE1 /* Assets.xcassets */; };
 		D497E138249A3CDB0052BDE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D497E136249A3CDB0052BDE1 /* LaunchScreen.storyboard */; };
+		D4E1AEBF24A50F9F00E1C273 /* SignUpScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1AEBE24A50F9F00E1C273 /* SignUpScreen.swift */; };
+		D4E1AEC324A5227400E1C273 /* MarketScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1AEC224A5227400E1C273 /* MarketScreen.swift */; };
+		D4E1AEC524A5228600E1C273 /* GymScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1AEC424A5228600E1C273 /* GymScreen.swift */; };
+		D4E1AEC724A5229300E1C273 /* VetScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1AEC624A5229300E1C273 /* VetScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterScreen.swift; sourceTree = "<group>"; };
+		D415F56D24A50B4F009320D0 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D497E128249A3CDA0052BDE1 /* Tamafoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamafoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +32,10 @@
 		D497E134249A3CDB0052BDE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D497E137249A3CDB0052BDE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D497E139249A3CDB0052BDE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4E1AEBE24A50F9F00E1C273 /* SignUpScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpScreen.swift; sourceTree = "<group>"; };
+		D4E1AEC224A5227400E1C273 /* MarketScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketScreen.swift; sourceTree = "<group>"; };
+		D4E1AEC424A5228600E1C273 /* GymScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymScreen.swift; sourceTree = "<group>"; };
+		D4E1AEC624A5229300E1C273 /* VetScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,10 +71,16 @@
 				D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */,
 				D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */,
 				D497E12F249A3CDA0052BDE1 /* ViewController.swift */,
+				D4E1AEBE24A50F9F00E1C273 /* SignUpScreen.swift */,
+				D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */,
+				D415F56D24A50B4F009320D0 /* MainScreen.swift */,
 				D497E131249A3CDA0052BDE1 /* Main.storyboard */,
 				D497E134249A3CDB0052BDE1 /* Assets.xcassets */,
 				D497E136249A3CDB0052BDE1 /* LaunchScreen.storyboard */,
 				D497E139249A3CDB0052BDE1 /* Info.plist */,
+				D4E1AEC224A5227400E1C273 /* MarketScreen.swift */,
+				D4E1AEC424A5228600E1C273 /* GymScreen.swift */,
+				D4E1AEC624A5229300E1C273 /* VetScreen.swift */,
 			);
 			path = Tamafoodie;
 			sourceTree = "<group>";
@@ -140,7 +158,13 @@
 			files = (
 				D497E130249A3CDA0052BDE1 /* ViewController.swift in Sources */,
 				D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */,
+				D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */,
 				D497E12E249A3CDA0052BDE1 /* SceneDelegate.swift in Sources */,
+				D4E1AEC724A5229300E1C273 /* VetScreen.swift in Sources */,
+				D4E1AEC324A5227400E1C273 /* MarketScreen.swift in Sources */,
+				D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */,
+				D4E1AEBF24A50F9F00E1C273 /* SignUpScreen.swift in Sources */,
+				D4E1AEC524A5228600E1C273 /* GymScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,7 +31,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dog" translatesAutoresizingMaskIntoConstraints="NO" id="9Kc-36-p0w">
-                                <rect key="frame" x="190" y="227" width="75" height="73"/>
+                                <rect key="frame" x="240" y="227" width="75" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bunny" translatesAutoresizingMaskIntoConstraints="NO" id="zpG-80-CeA">
@@ -39,7 +39,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="GNo-Ki-oCj">
-                                <rect key="frame" x="116" y="227" width="75" height="73"/>
+                                <rect key="frame" x="150" y="227" width="75" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="og tama" translatesAutoresizingMaskIntoConstraints="NO" id="Muc-ZZ-5Nj">
+                                <rect key="frame" x="62" y="227" width="80" height="73"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -57,6 +61,7 @@
         <image name="dog" width="630" height="750"/>
         <image name="foodie" width="1770" height="270"/>
         <image name="hamster" width="690" height="750"/>
+        <image name="og tama" width="390" height="480"/>
         <image name="tama" width="1170" height="270"/>
     </resources>
 </document>
