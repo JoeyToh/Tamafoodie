@@ -75,6 +75,9 @@
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="gwg-c9-SQY" kind="presentation" modalPresentationStyle="fullScreen" id="gXb-Rc-xHD"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you a new user? Click here to sign up!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gxn-Cn-cXQ">
                                 <rect key="frame" x="27.666666666666657" y="689" width="320" height="21"/>
@@ -490,6 +493,9 @@
             <point key="canvasLocation" x="2763" y="1159"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gXb-Rc-xHD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowleft" width="120" height="210"/>
         <image name="arrowright" width="120" height="210"/>
