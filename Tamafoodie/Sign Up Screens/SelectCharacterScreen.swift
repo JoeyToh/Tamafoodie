@@ -10,6 +10,7 @@ import UIKit
 import FirebaseFirestore
 
 class SelectCharacterScreen: UIViewController {
+    
     // MARK: - Character Selection
     @IBOutlet var imageView: UIImageView!
     var character: UIImage!
@@ -92,6 +93,7 @@ class SelectCharacterScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UID = UIDValue
     }
     
     @IBAction func didTapSelect(_ sender: Any) {
@@ -108,6 +110,7 @@ class SelectCharacterScreen: UIViewController {
     @objc func didTapDone() {
         self.character = imageView.image!
         self.characterName = namingTextField.text!
+        print(UID!)
         // add user info to database
         let db = Firestore.firestore()
         
@@ -125,4 +128,8 @@ class SelectCharacterScreen: UIViewController {
         vc.finalCharacterName = self.characterName
         present(vc, animated: true)
     }
+    
+    // MARK: - Firebase
+    var UID: String!
+    var UIDValue: String!
 }
