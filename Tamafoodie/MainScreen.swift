@@ -17,7 +17,6 @@ class MainScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         character.image = finalCharacter
-        // Do any additional setup after loading the view.
     }
 
 

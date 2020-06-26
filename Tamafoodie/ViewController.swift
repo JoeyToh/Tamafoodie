@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                 // display error message
                 self.errorLabel.text = error!.localizedDescription
             } else {
-                let h = self.storyboard?.instantiateViewController(identifier: "Select Character") as? SelectCharacterScreen
+                let h = self.storyboard?.instantiateViewController(identifier: "Main Screen") as? MainScreen
                 self.view.window?.rootViewController = h
                 self.view.window?.makeKeyAndVisible()
             }
