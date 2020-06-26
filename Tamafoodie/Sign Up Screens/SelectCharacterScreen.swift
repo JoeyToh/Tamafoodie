@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class SelectCharacterScreen: UIViewController {
-    
     // MARK: - Character Selection
     @IBOutlet var imageView: UIImageView!
     var character: UIImage!
@@ -36,6 +36,18 @@ class SelectCharacterScreen: UIViewController {
             counter -= 1
         }
         imageView.image = imageArr[counter]
+    }
+    
+    func getCharacter(counter:Int) -> String? {
+        if counter == 0 {
+            return "hamster"
+        } else if counter == 1 {
+            return "bunny"
+        } else if counter == 2 {
+            return "dog"
+        } else {
+            return "og tama"
+        }
     }
     
     // MARK: - Character Naming
@@ -77,6 +89,7 @@ class SelectCharacterScreen: UIViewController {
     var characterName: String!
 
     // MARK: - Actions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -95,6 +108,16 @@ class SelectCharacterScreen: UIViewController {
     @objc func didTapDone() {
         self.character = imageView.image!
         self.characterName = namingTextField.text!
+        // add user info to database
+        let db = Firestore.firestore()
+        
+        db.collection("users").document("meep").setData(["characterName": self.characterName!, "character":self.getCharacter(counter: counter)!]) { (error) in
+            if (error != nil) {
+                // do smth but hopefully doesnt happen
+            }
+        }
+        
+        // transition to next screen
         let vc = (self.storyboard?.instantiateViewController(identifier: "Successful Pet Creation"))! as SuccessfulPetCreationScreen
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical

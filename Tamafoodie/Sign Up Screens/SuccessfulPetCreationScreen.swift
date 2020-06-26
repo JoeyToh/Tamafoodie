@@ -12,6 +12,7 @@ class SuccessfulPetCreationScreen: UIViewController {
 
     @IBOutlet weak var characterName: UILabel!
     var finalCharacterName: String!
+    var finalTest: String!
     @IBOutlet weak var character: UIImageView!
     var finalCharacter: UIImage!
     

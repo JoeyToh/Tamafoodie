@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class ViewController: UIViewController {
 
@@ -20,6 +21,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    var charName: String?
+    var char: String?
     @IBAction func loginTapped(_ sender: Any) {
         // add cleaned up fields
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -31,9 +34,17 @@ class ViewController: UIViewController {
                 // display error message
                 self.errorLabel.text = error!.localizedDescription
             } else {
-                let h = self.storyboard?.instantiateViewController(identifier: "Main Screen") as? MainScreen
-                self.view.window?.rootViewController = h
-                self.view.window?.makeKeyAndVisible()
+                // set up animal
+                let db = Firestore.firestore()
+                let doc = db.collection("users").document(email)                
+                doc.getDocument { (document, error) in
+                    // transition to screen
+                    let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
+                    vc.modalPresentationStyle = .fullScreen
+                    vc.finalCharacterName = document?.get("name") as? String
+                    vc.finalCharacter = UIImage(named: (document?.get("character") as? String)!)
+                    self.present(vc, animated: true)
+                }
             }
         }
     }
