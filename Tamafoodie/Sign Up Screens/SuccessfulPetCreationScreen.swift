@@ -24,7 +24,6 @@ class SuccessfulPetCreationScreen: UIViewController {
     @IBAction func didTapOkay(_ sender: Any) {
         let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
         vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
         vc.finalCharacter = self.finalCharacter
         vc.finalCharacterName = self.finalCharacterName
         present(vc, animated: true)

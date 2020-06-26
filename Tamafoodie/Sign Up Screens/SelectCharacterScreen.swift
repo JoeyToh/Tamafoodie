@@ -97,7 +97,7 @@ class SelectCharacterScreen: UIViewController {
         self.characterName = namingTextField.text!
         let vc = (self.storyboard?.instantiateViewController(identifier: "Successful Pet Creation"))! as SuccessfulPetCreationScreen
         vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
+        vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
         present(vc, animated: true)
