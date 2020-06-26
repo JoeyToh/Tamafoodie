@@ -212,7 +212,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapSelect:" destination="W5F-og-rcV" eventType="touchDown" id="Fjg-74-psy"/>
-                                    <segue destination="gwg-c9-SQY" kind="presentation" identifier="selectedCharacter" modalPresentationStyle="fullScreen" id="vrL-hX-Xdv"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hamster" translatesAutoresizingMaskIntoConstraints="NO" id="lPW-B4-td3">
@@ -231,6 +230,82 @@
             </objects>
             <point key="canvasLocation" x="1677.5999999999999" y="-273.39901477832512"/>
         </scene>
+        <!--Successful Pet Creation Screen-->
+        <scene sceneID="cP1-e8-d0V">
+            <objects>
+                <viewController storyboardIdentifier="Successful Pet Creation" id="VuW-6t-cQn" customClass="SuccessfulPetCreationScreen" customModule="Tamafoodie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9TB-3a-lUh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3af-vl-AcQ">
+                                <rect key="frame" x="64" y="343" width="246" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Congratulations!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qm-mT-CNu">
+                                <rect key="frame" x="80" y="183" width="214" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="foodie" translatesAutoresizingMaskIntoConstraints="NO" id="a9c-Ae-fEE">
+                                <rect key="frame" x="160" y="22" width="176" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tama" translatesAutoresizingMaskIntoConstraints="NO" id="H1x-ht-Xiu">
+                                <rect key="frame" x="39" y="22" width="115" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have just created a new pet!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jip-eh-suO">
+                                <rect key="frame" x="8" y="227" width="359" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l1-48-epR">
+                                <rect key="frame" x="149" y="577" width="76" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96563988919999999" green="0.7274998426" blue="0.19192120430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="OKAY">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOkay:" destination="VuW-6t-cQn" eventType="touchDown" id="pPs-12-2lj"/>
+                                    <segue destination="gwg-c9-SQY" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="DE8-Er-wF1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1WC-Gs-zFn">
+                                <rect key="frame" x="16" y="297" width="343" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.53024363519999995" green="0.8086981177" blue="0.94904083009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="aTM-KS-MYC"/>
+                    </view>
+                    <connections>
+                        <outlet property="character" destination="3af-vl-AcQ" id="aV3-9f-aDi"/>
+                        <outlet property="characterName" destination="1WC-Gs-zFn" id="fic-tQ-CUc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scW-pF-XHv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2525.5999999999999" y="-273.39901477832512"/>
+        </scene>
         <!--Main Screen-->
         <scene sceneID="iPc-fy-vTO">
             <objects>
@@ -244,15 +319,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="clock" translatesAutoresizingMaskIntoConstraints="NO" id="M9L-CT-7ZY">
-                                <rect key="frame" x="25" y="126" width="144" height="140"/>
+                                <rect key="frame" x="25" y="124" width="144" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whalepainting" translatesAutoresizingMaskIntoConstraints="NO" id="qXP-01-V2n">
-                                <rect key="frame" x="203" y="126" width="142" height="131"/>
+                                <rect key="frame" x="203" y="124" width="142" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iZM-6S-7bq">
-                                <rect key="frame" x="55" y="315" width="264" height="263"/>
+                                <rect key="frame" x="55" y="322" width="264" height="263"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CI3-uR-pKQ">
@@ -272,6 +347,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="didTapVet:" destination="gwg-c9-SQY" eventType="touchUpInside" id="rHL-sY-Tq7"/>
                                     <segue destination="J3d-7z-UDB" kind="presentation" modalPresentationStyle="fullScreen" id="tqq-E0-szC"/>
                                 </connections>
                             </button>
@@ -292,6 +368,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="didTapGym:" destination="gwg-c9-SQY" eventType="touchUpInside" id="CkF-eg-WI1"/>
                                     <segue destination="lRi-Mt-04d" kind="presentation" modalPresentationStyle="fullScreen" id="u3g-6O-2li"/>
                                 </connections>
                             </button>
@@ -312,20 +389,36 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="didTapMarket:" destination="gwg-c9-SQY" eventType="touchUpInside" id="lTp-rT-D75"/>
                                     <segue destination="CHD-gm-4QO" kind="presentation" modalPresentationStyle="fullScreen" id="obd-v8-Pl6"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgh-ep-4Kf">
+                                <rect key="frame" x="166" y="274" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFW-Cb-qSN">
+                                <rect key="frame" x="0.0" y="282" width="375" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rkk-tH-mbY"/>
                     </view>
                     <connections>
                         <outlet property="character" destination="iZM-6S-7bq" id="9Sx-lJ-v3B"/>
+                        <outlet property="characterName" destination="GFW-Cb-qSN" id="23g-hN-pUR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gnL-BI-W6X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677.5999999999999" y="433.74384236453204"/>
+            <point key="canvasLocation" x="2085.5999999999999" y="433.74384236453204"/>
         </scene>
         <!--Sign up screen-->
         <scene sceneID="Yfl-YR-sek">
@@ -387,6 +480,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="didTapSignUp" destination="3hV-5H-tgO" eventType="touchDown" id="j6K-R1-mmW"/>
+                                    <segue destination="W5F-og-rcV" kind="presentation" modalPresentationStyle="fullScreen" id="2jB-Ka-aBR"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="tama" translatesAutoresizingMaskIntoConstraints="NO" id="Y6s-Wd-hva">

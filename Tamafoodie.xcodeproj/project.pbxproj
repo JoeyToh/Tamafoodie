@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D7F4560AC002E9132C558BD /* Pods_Tamafoodie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8147FDB8192A481CF6C830E4 /* Pods_Tamafoodie.framework */; };
 		B828EA7424A534260048FCCE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B828EA7324A534260048FCCE /* GoogleService-Info.plist */; };
+		D400B75124A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400B75024A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift */; };
 		D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */; };
 		D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56D24A50B4F009320D0 /* MainScreen.swift */; };
 		D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 		8147FDB8192A481CF6C830E4 /* Pods_Tamafoodie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tamafoodie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A1FD95553FD1805C9C9866 /* Pods-Tamafoodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tamafoodie.debug.xcconfig"; path = "Target Support Files/Pods-Tamafoodie/Pods-Tamafoodie.debug.xcconfig"; sourceTree = "<group>"; };
 		B828EA7324A534260048FCCE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D400B75024A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPetCreationScreen.swift; sourceTree = "<group>"; };
 		D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterScreen.swift; sourceTree = "<group>"; };
 		D415F56D24A50B4F009320D0 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		D497E128249A3CDA0052BDE1 /* Tamafoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamafoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,58 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D400B74324A5E85F00C9BDBE /* Market Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1AEC224A5227400E1C273 /* MarketScreen.swift */,
+			);
+			path = "Market Screens";
+			sourceTree = "<group>";
+		};
+		D400B74424A5E87400C9BDBE /* Gym Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1AEC424A5228600E1C273 /* GymScreen.swift */,
+			);
+			path = "Gym Screens";
+			sourceTree = "<group>";
+		};
+		D400B74524A5E88100C9BDBE /* Vet Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1AEC624A5229300E1C273 /* VetScreen.swift */,
+			);
+			path = "Vet Screens";
+			sourceTree = "<group>";
+		};
+		D400B74624A5E8C600C9BDBE /* Sign Up Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1AEBE24A50F9F00E1C273 /* SignUpScreen.swift */,
+				D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */,
+				D400B75024A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift */,
+			);
+			path = "Sign Up Screens";
+			sourceTree = "<group>";
+		};
+		D400B74724A5E8EE00C9BDBE /* Login Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D497E12F249A3CDA0052BDE1 /* ViewController.swift */,
+			);
+			path = "Login Screens";
+			sourceTree = "<group>";
+		};
+		D400B74824A5E90900C9BDBE /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */,
+				D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */,
+				D497E136249A3CDB0052BDE1 /* LaunchScreen.storyboard */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
 		D497E11F249A3CDA0052BDE1 = {
 			isa = PBXGroup;
 			children = (
@@ -94,18 +148,15 @@
 		D497E12A249A3CDA0052BDE1 /* Tamafoodie */ = {
 			isa = PBXGroup;
 			children = (
-				D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */,
-				D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */,
-				D497E12F249A3CDA0052BDE1 /* ViewController.swift */,
-				D4E1AEBE24A50F9F00E1C273 /* SignUpScreen.swift */,
-				D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */,
+				D400B74724A5E8EE00C9BDBE /* Login Screens */,
+				D400B74624A5E8C600C9BDBE /* Sign Up Screens */,
+				D400B74524A5E88100C9BDBE /* Vet Screens */,
+				D400B74424A5E87400C9BDBE /* Gym Screens */,
+				D400B74324A5E85F00C9BDBE /* Market Screens */,
+				D400B74824A5E90900C9BDBE /* Others */,
 				D415F56D24A50B4F009320D0 /* MainScreen.swift */,
 				D497E131249A3CDA0052BDE1 /* Main.storyboard */,
 				D497E134249A3CDB0052BDE1 /* Assets.xcassets */,
-				D497E136249A3CDB0052BDE1 /* LaunchScreen.storyboard */,
-				D4E1AEC224A5227400E1C273 /* MarketScreen.swift */,
-				D4E1AEC424A5228600E1C273 /* GymScreen.swift */,
-				D4E1AEC624A5229300E1C273 /* VetScreen.swift */,
 				D497E139249A3CDB0052BDE1 /* Info.plist */,
 				B828EA7324A534260048FCCE /* GoogleService-Info.plist */,
 			);
@@ -236,6 +287,7 @@
 				D4E1AEC324A5227400E1C273 /* MarketScreen.swift in Sources */,
 				D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */,
 				D4E1AEBF24A50F9F00E1C273 /* SignUpScreen.swift in Sources */,
+				D400B75124A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift in Sources */,
 				D4E1AEC524A5228600E1C273 /* GymScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
