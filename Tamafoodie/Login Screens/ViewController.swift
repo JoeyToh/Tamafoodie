@@ -41,7 +41,7 @@ class ViewController: UIViewController {
                     // transition to screen
                     let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
                     vc.modalPresentationStyle = .fullScreen
-                    vc.finalCharacterName = document?.get("name") as? String
+                    vc.finalCharacterName = document?.get("characterName") as? String
                     vc.finalCharacter = UIImage(named: (document?.get("character") as? String)!)
                     self.present(vc, animated: true)
                 }

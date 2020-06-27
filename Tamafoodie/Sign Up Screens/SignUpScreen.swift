@@ -45,14 +45,14 @@ class SignUpScreen: UIViewController {
         } else {
         // create user
             Auth.auth().createUser(withEmail: email, password: pw) { (result, err) in
-                self.UID = result?.user.uid
+                self.email = email
             // check for errors
                 if (err != nil) {
                     self.errorLabel.text = err!.localizedDescription
                 } else {
                     // transition to home screen
                     let vc = (self.storyboard?.instantiateViewController(identifier: "Select Character"))! as SelectCharacterScreen
-                    vc.UIDValue = self.UID
+                    vc.emailValue = self.email
                     vc.modalPresentationStyle = .fullScreen
                     vc.modalTransitionStyle = .coverVertical
                     self.present(vc, animated: true)
@@ -61,7 +61,7 @@ class SignUpScreen: UIViewController {
         }
     }
     
-    var UID: String!
+    var email: String!
     
     
 

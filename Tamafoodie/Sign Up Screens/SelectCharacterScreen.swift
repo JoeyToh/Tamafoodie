@@ -93,7 +93,6 @@ class SelectCharacterScreen: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        UID = UIDValue
     }
     
     @IBAction func didTapSelect(_ sender: Any) {
@@ -110,11 +109,10 @@ class SelectCharacterScreen: UIViewController {
     @objc func didTapDone() {
         self.character = imageView.image!
         self.characterName = namingTextField.text!
-        print(UID!)
         // add user info to database
         let db = Firestore.firestore()
         
-        db.collection("users").document("meep").setData(["characterName": self.characterName!, "character":self.getCharacter(counter: counter)!]) { (error) in
+        db.collection("users").document(emailValue!).setData(["characterName": self.characterName!, "character":self.getCharacter(counter: counter)!]) { (error) in
             if (error != nil) {
                 // do smth but hopefully doesnt happen
             }
@@ -130,6 +128,5 @@ class SelectCharacterScreen: UIViewController {
     }
     
     // MARK: - Firebase
-    var UID: String!
-    var UIDValue: String!
+    var emailValue: String!
 }
