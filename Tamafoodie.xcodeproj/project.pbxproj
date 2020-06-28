@@ -12,6 +12,8 @@
 		D400B75124A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D400B75024A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift */; };
 		D415F56C24A50B18009320D0 /* SelectCharacterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */; };
 		D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D415F56D24A50B4F009320D0 /* MainScreen.swift */; };
+		D43DBEA824A876A100219290 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D43DBEA724A876A100219290 /* GameScene.sks */; };
+		D43DBEAD24A8775800219290 /* HungerBarScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43DBEAC24A8775800219290 /* HungerBarScreen.swift */; };
 		D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */; };
 		D497E12E249A3CDA0052BDE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */; };
 		D497E130249A3CDA0052BDE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D497E12F249A3CDA0052BDE1 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 		D400B75024A5F70C00C9BDBE /* SuccessfulPetCreationScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessfulPetCreationScreen.swift; sourceTree = "<group>"; };
 		D415F56B24A50B18009320D0 /* SelectCharacterScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectCharacterScreen.swift; sourceTree = "<group>"; };
 		D415F56D24A50B4F009320D0 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		D43DBEA724A876A100219290 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		D43DBEAC24A8775800219290 /* HungerBarScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HungerBarScreen.swift; sourceTree = "<group>"; };
 		D497E128249A3CDA0052BDE1 /* Tamafoodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tamafoodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D497E12B249A3CDA0052BDE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D497E12D249A3CDA0052BDE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +131,15 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		D43DBEA924A876F900219290 /* Hunger Bar */ = {
+			isa = PBXGroup;
+			children = (
+				D43DBEA724A876A100219290 /* GameScene.sks */,
+				D43DBEAC24A8775800219290 /* HungerBarScreen.swift */,
+			);
+			path = "Hunger Bar";
+			sourceTree = "<group>";
+		};
 		D497E11F249A3CDA0052BDE1 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +161,7 @@
 		D497E12A249A3CDA0052BDE1 /* Tamafoodie */ = {
 			isa = PBXGroup;
 			children = (
+				D43DBEA924A876F900219290 /* Hunger Bar */,
 				D400B74724A5E8EE00C9BDBE /* Login Screens */,
 				D400B74624A5E8C600C9BDBE /* Sign Up Screens */,
 				D400B74524A5E88100C9BDBE /* Vet Screens */,
@@ -224,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D497E138249A3CDB0052BDE1 /* LaunchScreen.storyboard in Resources */,
+				D43DBEA824A876A100219290 /* GameScene.sks in Resources */,
 				D497E135249A3CDB0052BDE1 /* Assets.xcassets in Resources */,
 				B828EA7424A534260048FCCE /* GoogleService-Info.plist in Resources */,
 				D497E133249A3CDA0052BDE1 /* Main.storyboard in Resources */,
@@ -281,6 +296,7 @@
 			files = (
 				D497E130249A3CDA0052BDE1 /* ViewController.swift in Sources */,
 				D497E12C249A3CDA0052BDE1 /* AppDelegate.swift in Sources */,
+				D43DBEAD24A8775800219290 /* HungerBarScreen.swift in Sources */,
 				D415F56E24A50B4F009320D0 /* MainScreen.swift in Sources */,
 				D497E12E249A3CDA0052BDE1 /* SceneDelegate.swift in Sources */,
 				D4E1AEC724A5229300E1C273 /* VetScreen.swift in Sources */,
