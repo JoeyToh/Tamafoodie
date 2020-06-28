@@ -1,5 +1,5 @@
 //
-//  HungerBarScreen.swift
+//  HungerBarScene.swift
 //  Tamafoodie
 //
 //  Created by Toh Joey on 28/6/20.
@@ -9,25 +9,6 @@
 import UIKit
 import SpriteKit
 
-class HungerBarScreen: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        if let scene = HungerBarScene(fileNamed:"GameScene.sks") {
-            let skView = self.view as! SKView
-            // skView.frame = CGRect(x: 0, y: 0, width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-            skView.showsFPS = false
-            skView.showsNodeCount = false
-            skView.ignoresSiblingOrder = false
-            scene.scaleMode = .aspectFill
-            skView.presentScene(scene)
-        }
-    }
-    
-}
-
-
 class HungerBarScene: SKScene {
     
     override func didMove(to view: SKView) {
@@ -35,10 +16,9 @@ class HungerBarScene: SKScene {
         self.backgroundColor = .white
         
         // Hunger Bar
-        
         let barBorder = SKShapeNode(rectOf: CGSize(width: 150, height: 10), cornerRadius: 5)
-        barBorder.position = CGPoint(x: 0, y: 400)
-        barBorder.zPosition = 2
+        barBorder.position = CGPoint(x: -98, y: 505)
+        barBorder.zPosition = 3
         barBorder.strokeColor = .black
         barBorder.lineWidth = 2
         self.addChild(barBorder)
@@ -46,11 +26,22 @@ class HungerBarScene: SKScene {
         hungerBar.progress = 1.0
         self.addChild(hungerBar)
         
+        let outerBorder = SKShapeNode(rectOf: CGSize(width: 310, height: 100), cornerRadius: 5)
+        outerBorder.position = CGPoint(x: -140, y: 530)
+        outerBorder.zPosition = 2
+//        outerBorder.fillColor = .init(displayP3Red: 255, green: 198, blue: 17, alpha: 1)
+//        outerBorder.strokeColor = .init(displayP3Red: 107, green: 68, blue: 22, alpha: 1)
+        outerBorder.strokeColor = .brown
+        //outerBorder.fillColor = .orange
+        outerBorder.lineWidth = 7
+        self.addChild(outerBorder)
+        
+        
     }
     
     let hungerBar: HungerBar = {
         let bar = HungerBar(color: .red, size: CGSize(width: 150, height: 8))
-        bar.position = CGPoint(x: 0, y: 400)
+        bar.position = CGPoint(x: -98, y: 505)
         return bar
     }()
     
@@ -97,10 +88,11 @@ class HungerBar: SKNode {
         bar = SKSpriteNode(color: color, size: size)
         if let bar = bar {
             bar.xScale = 0.0
-            bar.zPosition = 2
+            bar.zPosition = 4
             bar.position = CGPoint(x: -size.width / 2, y: 0)
             bar.anchorPoint = CGPoint(x: 0.0, y: 0.5)
             addChild(bar)
         }
     }
 }
+
