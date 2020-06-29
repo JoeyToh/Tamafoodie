@@ -9,6 +9,7 @@
 import UIKit
 
 class MarketScreen: UIViewController {
+    
     @IBOutlet weak var buttonStack: UIStackView!
     var foodArray = [
         ["Egg, fried", 173],
@@ -27,6 +28,7 @@ class MarketScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        view.backgroundColor = UIColor.init(displayP3Red: 135/255, green: 206/255, blue: 242/255, alpha: 1)
         for int in 0...20 {
             numArray.append("button \(int)")
         }
