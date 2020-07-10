@@ -62,7 +62,5 @@ class SignUpScreen: UIViewController {
     }
     
     var email: String!
-    
-    
 
 }

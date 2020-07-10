@@ -11,60 +11,66 @@ import SpriteKit
 
 class HungerBarScene: SKScene {
     
-    override func didMove(to view: SKView) {
-        
-        self.backgroundColor = .white
-        
-        // Hunger Bar
-        let barBorder = SKShapeNode(rectOf: CGSize(width: 150, height: 10), cornerRadius: 5)
-        barBorder.position = CGPoint(x: -98, y: 505)
-        barBorder.zPosition = 3
-        barBorder.strokeColor = .black
-        barBorder.lineWidth = 2
-        self.addChild(barBorder)
-        
-        hungerBar.progress = 1.0
-        self.addChild(hungerBar)
-        
-        let outerBorder = SKShapeNode(rectOf: CGSize(width: 310, height: 100), cornerRadius: 5)
-        outerBorder.position = CGPoint(x: -140, y: 530)
-        outerBorder.zPosition = 2
-//        outerBorder.fillColor = .init(displayP3Red: 255, green: 198, blue: 17, alpha: 1)
-//        outerBorder.strokeColor = .init(displayP3Red: 107, green: 68, blue: 22, alpha: 1)
-        outerBorder.strokeColor = .brown
-        //outerBorder.fillColor = .orange
-        outerBorder.lineWidth = 7
-        self.addChild(outerBorder)
-        
-        
-    }
-    
     let hungerBar: HungerBar = {
-        let bar = HungerBar(color: .red, size: CGSize(width: 150, height: 8))
-        bar.position = CGPoint(x: -98, y: 505)
+        let bar = HungerBar(color: .red, size: CGSize(width: 148, height: 8))
+        bar.position = CGPoint(x: -80, y: 504)
         return bar
     }()
     
-    public var didTouchScreen: Bool = false
+    let incrementVal: CGFloat = CGFloat(0.01) // Bar will change by 0.01 everytime
+    var counter: Int = 0
+    var calories: Int = 0
+    var shouldIncrease: Bool = false // True if pet exercised, false if pet ate
+    var otherOngoing: Bool = false // True if there is ongoing change in bar due to eating/exercise. When false, bar will automatically increase w time
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        didTouchScreen = true
+    override func didMove(to view: SKView) {
+        
+        let bg = SKSpriteNode(imageNamed: "floor+wall")
+        bg.zPosition = 0
+        bg.size = self.size
+        self.addChild(bg)
+        
+        // MARK: - Drawing borders of hunger bar
+        let barBorder = SKShapeNode(rectOf: CGSize(width: 150, height: 10), cornerRadius: 5)
+        barBorder.position = CGPoint(x: -80, y: 504)
+        barBorder.zPosition = 3
+        barBorder.strokeColor = .black
+        barBorder.lineWidth = 3.5
+        self.addChild(barBorder)
+        
+        let outerBorder = SKShapeNode(rectOf: CGSize(width: 310, height: 100), cornerRadius: 5)
+        outerBorder.position = CGPoint(x: -125, y: 530)
+        outerBorder.zPosition = 2
+        outerBorder.strokeColor = .black
+        outerBorder.lineWidth = 7
+        self.addChild(outerBorder)
+        
+        // MARK: - Initialise hunger bar
+        hungerBar.progress = 0.5
+        self.addChild(hungerBar)
+        
     }
-    
-    let incrementVal = CGFloat(0.01)
-    var incrementCount = 0
     
     override func update(_ currentTime: TimeInterval) {
-        if didTouchScreen == true {
-            if incrementCount != 25 {
-                hungerBar.progress -= incrementVal
-                incrementCount += 1
+        if otherOngoing == true {
+            if shouldIncrease == true {
+                while counter != calories {
+                    hungerBar.progress += incrementVal
+                    counter += 1
+                }
             } else {
-                incrementCount = 0
-                didTouchScreen = false
+                while counter != calories {
+                    hungerBar.progress -= incrementVal
+                    counter += 1
+                }
             }
+            calories = 0
+            otherOngoing = false
+        } else {
+            hungerBar.progress += CGFloat(0.0001) // change to timer?
         }
     }
+    
 }
 
 class HungerBar: SKNode {

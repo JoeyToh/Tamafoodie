@@ -62,9 +62,9 @@ class SelectCharacterScreen: UIViewController {
     let namingLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 23, y: 291, width: 329, height: 66))
         label.text = "NAME YOUR CHARACTER"
-        label.textAlignment = NSTextAlignment.center
+        label.textAlignment = .center
         label.textColor = .black
-        label.font = label.font.withSize(23.0)
+        label.font = UIFont(name: "Games", size: 23.0)
         label.backgroundColor = .init(displayP3Red: 258, green: 184, blue: 0, alpha: 0.4)
         return label
     }()
@@ -72,16 +72,19 @@ class SelectCharacterScreen: UIViewController {
     let namingTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 23, y: 389, width: 329, height: 34))
         textField.placeholder = "Name"
+        textField.textAlignment = .center
         textField.backgroundColor = .white
         textField.textColor = .black
+        textField.autocapitalizationType = .none
+        textField.autocorrectionType = .no
         return textField
     }()
     
     let doneButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 158, y: 447, width: 59, height: 36))
         button.setTitle("Done", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Gameplay", size: 15.0)
         button.setTitleColor(.black, for: .normal)
-        button.titleLabel?.font = .systemFont(ofSize: 18.0)
         button.backgroundColor = .init(displayP3Red: 246/255, green: 186/255, blue: 49/255, alpha: 1)
         button.addTarget(self, action: #selector(didTapDone), for: .touchDown)
         return button
@@ -112,7 +115,9 @@ class SelectCharacterScreen: UIViewController {
         // add user info to database
         let db = Firestore.firestore()
         
-        db.collection("users").document(emailValue!).setData(["characterName": self.characterName!, "character":self.getCharacter(counter: counter)!]) { (error) in
+        db.collection("users").document(emailValue!).setData(["characterName": self.characterName!,
+                                                              "character":self.getCharacter(counter: counter)!,
+                                                              "hunger": 0.5]) { (error) in
             if (error != nil) {
                 // do smth but hopefully doesnt happen
             }
@@ -124,6 +129,7 @@ class SelectCharacterScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
+//        vc.email = self.emailValue
         present(vc, animated: true)
     }
     

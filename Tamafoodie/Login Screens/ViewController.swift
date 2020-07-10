@@ -23,6 +23,7 @@ class ViewController: UIViewController {
 
     var charName: String?
     var char: String?
+    
     @IBAction func loginTapped(_ sender: Any) {
         // add cleaned up fields
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)

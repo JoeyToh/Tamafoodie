@@ -29,6 +29,7 @@ class MarketScreen: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.init(displayP3Red: 135/255, green: 206/255, blue: 242/255, alpha: 1)
+        
         for int in 0...20 {
             numArray.append("button \(int)")
         }
@@ -42,7 +43,6 @@ class MarketScreen: UIViewController {
             }()*/
             
             let food = arr[0]
-            //let cal = arr[1]
             let oneBtn: UIButton = {
                 let button = UIButton()
                 button.setTitle(food as? String, for: .normal)
@@ -51,7 +51,7 @@ class MarketScreen: UIViewController {
                 button.backgroundColor = UIColor.init(red: 247, green: 184, blue: 49, alpha: 1)
                 button.layer.borderColor = UIColor.black.cgColor
                 button.layer.borderWidth = 1
-                button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+                button.addTarget(self, action: #selector(buttonAction), for: .touchDown)
                 button.tag = int
                 return button
             }()
@@ -67,10 +67,9 @@ class MarketScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = UIImage(named: "hamster")
         vc.finalCharacterName = "Hammie"
+        vc.calories = (self.foodArray[sender.tag][1] as! Int) / 10 // divide by 10 to make calories more proportional to hunger bar length
+        vc.otherOngoing = true
+        vc.shouldIncrease = false
         present(vc, animated: true)
-        
-        // can code whatever is needed to be done with the button
-        // make use the calories etc?
-        print("\(sender.tag)")
     }
 }
