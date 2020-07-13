@@ -72,6 +72,7 @@ class SelectCharacterScreen: UIViewController {
     let namingTextField: UITextField = {
         let textField = UITextField(frame: CGRect(x: 23, y: 389, width: 329, height: 34))
         textField.placeholder = "Name"
+        textField.font = UIFont(name: "Games", size: 23.0)
         textField.textAlignment = .center
         textField.backgroundColor = .white
         textField.textColor = .black

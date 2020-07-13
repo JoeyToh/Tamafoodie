@@ -48,6 +48,11 @@ class MainScreen: UIViewController {
     }
     
     @IBAction func tapMarket(_ sender: Any) {
+        let mkt = (self.storyboard?.instantiateViewController(identifier: "Market Screen"))! as MarketScreen
+        mkt.modalPresentationStyle = .fullScreen
+        mkt.CharacterName = self.finalCharacterName
+        mkt.Character = self.finalCharacter
+        self.present(mkt, animated: true)
     }
     
     @IBAction func tapGym(_ sender: Any) {
