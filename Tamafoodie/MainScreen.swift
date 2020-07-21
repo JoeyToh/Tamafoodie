@@ -17,6 +17,8 @@ class MainScreen: UIViewController {
     @IBOutlet weak var characterName: UILabel!
     var finalCharacterName: String!
     
+    var finalCharacterType: String!
+    
     var progress = 0
     var calories = 0
     var otherOngoing: Bool = false
@@ -56,5 +58,11 @@ class MainScreen: UIViewController {
     }
     
     @IBAction func tapGym(_ sender: Any) {
+        let gym = (self.storyboard?.instantiateViewController(identifier: "Gym Screen"))! as GymScreen
+        gym.modalPresentationStyle = .fullScreen
+        gym.CharacterName = self.finalCharacterName
+        gym.Character = self.finalCharacter
+        gym.CharacterType = self.finalCharacterType
+        self.present(gym, animated: true)
     }
 }

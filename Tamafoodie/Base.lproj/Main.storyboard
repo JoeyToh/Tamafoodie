@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -369,7 +369,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="tapGym:" destination="gwg-c9-SQY" eventType="touchDown" id="4c8-uQ-dBa"/>
-                                    <segue destination="lRi-Mt-04d" kind="presentation" modalPresentationStyle="fullScreen" id="u3g-6O-2li"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KJF-QO-PRy">
@@ -457,7 +456,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E3u-Ec-YqH" userLabel="Username label">
-                                <rect key="frame" x="20" y="441" width="86" height="16.666666666666664"/>
+                                <rect key="frame" x="20" y="441" width="86" height="16.666666666666686"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="79" id="xgX-Sj-oHe"/>
                                 </constraints>
@@ -602,6 +601,13 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="vet" translatesAutoresizingMaskIntoConstraints="NO" id="48K-hZ-qYi">
+                                        <rect key="frame" x="102" y="113" width="170" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="AGv-2q-xCe"/>
+                                            <constraint firstAttribute="width" constant="170" id="gCF-Vh-UJL"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.4172759056" green="0.81773906949999997" blue="0.97253936529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -629,7 +635,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GMv-05-1fr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="399"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="379"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jog-2X-PUJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="182"/>
@@ -672,13 +678,13 @@
                                                 <color key="backgroundColor" red="1" green="0.71824210879999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sgd-b3-had" userLabel="Buffer view">
-                                                <rect key="frame" x="0.0" y="310" width="375" height="60"/>
+                                                <rect key="frame" x="0.0" y="310" width="375" height="40"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="nDM-4t-xxW"/>
+                                                    <constraint firstAttribute="height" constant="40" id="nDM-4t-xxW"/>
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nam-Sx-sab">
-                                                <rect key="frame" x="0.0" y="370" width="375" height="29"/>
+                                                <rect key="frame" x="0.0" y="350" width="375" height="29"/>
                                                 <color key="backgroundColor" red="0.96563988919999999" green="0.7274998426" blue="0.19192120430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Gameplay" family="Gameplay" pointSize="14"/>
                                                 <state key="normal" title="Back">
@@ -741,9 +747,131 @@
                     <view key="view" contentMode="scaleToFill" id="pnF-6y-GJj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="foodie" translatesAutoresizingMaskIntoConstraints="NO" id="G5i-LF-7O2">
+                                <rect key="frame" x="160" y="22" width="176" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="83" id="6Bb-vs-vQe"/>
+                                    <constraint firstAttribute="width" constant="176" id="OCd-p0-fr0"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tama" translatesAutoresizingMaskIntoConstraints="NO" id="oVF-0k-g7k">
+                                <rect key="frame" x="39" y="22" width="115" height="83"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="cZH-rU-jQc"/>
+                                    <constraint firstAttribute="height" constant="83" id="k5c-PR-POR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="gym" translatesAutoresizingMaskIntoConstraints="NO" id="HSM-BR-2wJ">
+                                <rect key="frame" x="53" y="113" width="268" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="268" id="2Jx-zL-7QP"/>
+                                    <constraint firstAttribute="height" constant="49" id="abk-Sw-n8O"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="klV-PQ-bYx">
+                                <rect key="frame" x="67.666666666666686" y="278" width="240" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="Oky-Pl-OkS"/>
+                                    <constraint firstAttribute="width" constant="240" id="pVK-yI-8ox"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqk-5c-tgB">
+                                <rect key="frame" x="149" y="739" width="77" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96563988919999999" green="0.7274998426" blue="0.19192120430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Gameplay" family="Gameplay" pointSize="17"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backTapped:" destination="lRi-Mt-04d" eventType="touchUpInside" id="Gwe-le-OFD"/>
+                                    <action selector="didTapOkay:" destination="VuW-6t-cQn" eventType="touchDown" id="Ieb-ZZ-G6i"/>
+                                    <segue destination="gwg-c9-SQY" kind="presentation" modalPresentationStyle="fullScreen" id="k3y-dz-xdB"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LrO-zZ-O6a">
+                                <rect key="frame" x="67.666666666666686" y="278" width="240" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Ax8-WW-mj5"/>
+                                    <constraint firstAttribute="height" constant="256" id="m5R-Mh-1ph"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yk-yK-XFc">
+                                <rect key="frame" x="24" y="633" width="144" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96563988919999999" green="0.7274998426" blue="0.19192120430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Gameplay" family="Gameplay" pointSize="17"/>
+                                <state key="normal" title="RUN">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOkay:" destination="VuW-6t-cQn" eventType="touchDown" id="3c8-Eh-oXn"/>
+                                    <action selector="runTapped:" destination="lRi-Mt-04d" eventType="touchUpInside" id="fQq-Ye-9zA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCK-oh-FPy">
+                                <rect key="frame" x="215" y="633" width="144" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96563988919999999" green="0.7274998426" blue="0.19192120430000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Gameplay" family="Gameplay" pointSize="17"/>
+                                <state key="normal" title="LIFT WEIGHTS">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapOkay:" destination="VuW-6t-cQn" eventType="touchDown" id="DTX-31-e8h"/>
+                                    <action selector="liftTapped:" destination="lRi-Mt-04d" eventType="touchUpInside" id="DZz-YX-Rdj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.53024363519999995" green="0.8086981177" blue="0.94904083009999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LrO-zZ-O6a" firstAttribute="centerY" secondItem="pnF-6y-GJj" secondAttribute="centerY" id="Bfa-tS-dHV"/>
+                            <constraint firstItem="HSM-BR-2wJ" firstAttribute="top" secondItem="G5i-LF-7O2" secondAttribute="bottom" constant="8" id="Jrl-fY-QfM"/>
+                            <constraint firstItem="oVF-0k-g7k" firstAttribute="top" secondItem="pnF-6y-GJj" secondAttribute="top" constant="22" id="L5w-hr-Sd2"/>
+                            <constraint firstItem="G5i-LF-7O2" firstAttribute="leading" secondItem="oVF-0k-g7k" secondAttribute="trailing" constant="6" id="OJU-hA-dZT"/>
+                            <constraint firstItem="gLK-B0-Kqe" firstAttribute="trailing" secondItem="G5i-LF-7O2" secondAttribute="trailing" constant="39" id="OgO-BT-Fzd"/>
+                            <constraint firstItem="HSM-BR-2wJ" firstAttribute="leading" secondItem="gLK-B0-Kqe" secondAttribute="leading" constant="53" id="bx5-vZ-bIm"/>
+                            <constraint firstItem="G5i-LF-7O2" firstAttribute="top" secondItem="pnF-6y-GJj" secondAttribute="top" constant="22" id="e12-Fz-cx8"/>
+                            <constraint firstItem="LrO-zZ-O6a" firstAttribute="centerX" secondItem="pnF-6y-GJj" secondAttribute="centerX" id="eTc-aE-Frk"/>
+                            <constraint firstItem="klV-PQ-bYx" firstAttribute="centerX" secondItem="pnF-6y-GJj" secondAttribute="centerX" id="lZz-gi-c9p"/>
+                            <constraint firstItem="klV-PQ-bYx" firstAttribute="centerY" secondItem="pnF-6y-GJj" secondAttribute="centerY" id="qP8-A4-inD"/>
+                            <constraint firstItem="oVF-0k-g7k" firstAttribute="leading" secondItem="gLK-B0-Kqe" secondAttribute="leading" constant="39" id="tW4-8v-0hc"/>
+                            <constraint firstItem="gLK-B0-Kqe" firstAttribute="trailing" secondItem="HSM-BR-2wJ" secondAttribute="trailing" constant="54" id="wic-d0-4aW"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="gLK-B0-Kqe"/>
                     </view>
+                    <connections>
+                        <outlet property="characterView" destination="LrO-zZ-O6a" id="WYd-0s-KVt"/>
+                        <outlet property="gifView" destination="klV-PQ-bYx" id="43q-AN-PPl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pz-Vu-HaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -758,9 +886,11 @@
         <image name="arrowright" width="120" height="210"/>
         <image name="clock" width="400" height="400"/>
         <image name="foodie" width="1770" height="270"/>
+        <image name="gym" width="1005" height="210"/>
         <image name="hamster" width="690" height="750"/>
         <image name="market" width="1155" height="270"/>
         <image name="tama" width="1170" height="270"/>
+        <image name="vet" width="337" height="128"/>
         <image name="whalepainting" width="823" height="889"/>
     </resources>
 </document>

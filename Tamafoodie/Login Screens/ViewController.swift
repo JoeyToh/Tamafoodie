@@ -17,8 +17,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     var charName: String?
@@ -44,6 +50,7 @@ class ViewController: UIViewController {
                     vc.modalPresentationStyle = .fullScreen
                     vc.finalCharacterName = document?.get("characterName") as? String
                     vc.finalCharacter = UIImage(named: (document?.get("character") as? String)!)
+                    vc.finalCharacterType = document?.get("character") as? String
                     self.present(vc, animated: true)
                 }
             }
