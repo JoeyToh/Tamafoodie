@@ -61,8 +61,6 @@ class MainScreen: UIViewController {
             scene.scaleMode = .aspectFill
             skView.presentScene(scene)
         }
-        
-        print(progress)
     }
 
     @IBAction func tapVet(_ sender: Any) {
