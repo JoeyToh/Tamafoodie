@@ -13,6 +13,16 @@ class GymScreen: UIViewController {
     var CharacterName:  String!
     var CharacterType: String!
     
+    var calories = 0 // no. of calories burnt
+    var hunger = 0 // to change hunger bar
+    
+    // Data passing
+    var email: String!
+    var accumulatedCalories = 0
+    var progress = 0.0
+    var wallet = 0.0
+    
+    
     @IBOutlet weak var gifView: UIImageView!
     @IBOutlet weak var characterView: UIImageView!
     
@@ -32,7 +42,7 @@ class GymScreen: UIViewController {
         gifView.startAnimating()
         gifView.isHidden = false
     }
-    
+
     @IBAction func liftTapped(_ sender: Any) {
         characterView.isHidden = true
         gifView.animationImages = dogLiftImages
@@ -41,15 +51,36 @@ class GymScreen: UIViewController {
         gifView.isHidden = false
     }
     
+    // To put after each exercise is done (can refer to market screen as to where to dump this code)
+    /*
+     self.calories = ? // just help to update amt of calories burnt here
+     self.accumulatedCalories -= calories
+     hunger = calories / 5 // can adjust denominator to make hunger increase more proportionately
+     */
+    
+    
+    // Done button
+    /*
+     vc.calories = hunger
+     vc.otherOngoing = true
+     vc.shouldIncrease = true
+     
+     vc.email = self.email!
+     vc.accumulatedCalories = self.accumulatedCalories
+     vc.progress = self.progress
+     vc.wallet = self.wallet
+     */
+    
     @IBAction func backTapped(_ sender: Any) {
         let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
-        // i removed the cal part cus if we were to go back there should be any changes to calories right?
-        vc.otherOngoing = true
-        vc.shouldIncrease = false
+        vc.email = self.email!
+        vc.accumulatedCalories = self.accumulatedCalories
+        vc.progress = self.progress
+        vc.wallet = self.wallet
         present(vc, animated: true)
     }
 }

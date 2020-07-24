@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import FirebaseFirestore
 
 class HungerBarScene: SKScene {
     
@@ -17,11 +18,14 @@ class HungerBarScene: SKScene {
         return bar
     }()
     
-    let incrementVal: CGFloat = CGFloat(0.01) // Bar will change by 0.01 everytime
+    let incrementVal: Double = 0.01 // Bar will change by 0.01 everytime
     var counter: Int = 0
     var calories: Int = 0
     var shouldIncrease: Bool = false // True if pet exercised, false if pet ate
     var otherOngoing: Bool = false // True if there is ongoing change in bar due to eating/exercise. When false, bar will automatically increase w time
+    
+    var progress = 0.0
+    var email: String = ""
     
     override func didMove(to view: SKView) {
         
@@ -46,9 +50,8 @@ class HungerBarScene: SKScene {
         self.addChild(outerBorder)
         
         // MARK: - Initialise hunger bar
-        hungerBar.progress = 0.5
+        // hungerBar.progress = progress
         self.addChild(hungerBar)
-        
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -67,23 +70,25 @@ class HungerBarScene: SKScene {
             calories = 0
             otherOngoing = false
         } else {
-            hungerBar.progress += CGFloat(0.0001) // change to timer?
+            hungerBar.progress += 0.0001
         }
+        // progress = hungerBar.progress
+        mainVCInstance?.progress = hungerBar.progress
     }
     
 }
 
 class HungerBar: SKNode {
     var bar: SKSpriteNode?
-    var _progress: CGFloat = 0
-    var progress: CGFloat {
+    var _progress: Double = 0
+    var progress: Double {
         get {
             return _progress
         }
         set {
             let value = max(min(newValue, 1.0), 0.0)
             if let bar = bar {
-                bar.xScale = value
+                bar.xScale = CGFloat(value)
                 _progress = value
             }
         }

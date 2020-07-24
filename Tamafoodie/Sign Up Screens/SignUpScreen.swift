@@ -61,6 +61,7 @@ class SignUpScreen: UIViewController {
         }
     }
     
+    // MARK:- Firebase
     var email: String!
 
 }
