@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
 
 class SuccessfulPetCreationScreen: UIViewController {
 
@@ -24,16 +24,16 @@ class SuccessfulPetCreationScreen: UIViewController {
     }
     
     @IBAction func didTapOkay(_ sender: Any) {
-//        let db = Firestore.firestore()
-//        let progress = db.collection("users").document(email!)
-    
         let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
         vc.modalPresentationStyle = .fullScreen
         vc.finalCharacter = self.finalCharacter
         vc.finalCharacterName = self.finalCharacterName
+        vc.email = self.email!
+        vc.wallet = 50 // starting amount
+        vc.progress = 0.3
         present(vc, animated: true)
     }
     
     // MARK: - Firebase
-//    var email: String!
+    var email: String!
 }

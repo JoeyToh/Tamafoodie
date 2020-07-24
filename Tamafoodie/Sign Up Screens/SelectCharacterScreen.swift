@@ -118,7 +118,9 @@ class SelectCharacterScreen: UIViewController {
         
         db.collection("users").document(emailValue!).setData(["characterName": self.characterName!,
                                                               "character":self.getCharacter(counter: counter)!,
-                                                              "hunger": 0.5]) { (error) in
+                                                              "calories": 0,
+                                                              "wallet": 50,
+                                                              "progress": 0.3]) { (error) in
             if (error != nil) {
                 // do smth but hopefully doesnt happen
             }
@@ -130,8 +132,9 @@ class SelectCharacterScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
-//        vc.email = self.emailValue
+        vc.email = self.emailValue!
         present(vc, animated: true)
+        
     }
     
     // MARK: - Firebase

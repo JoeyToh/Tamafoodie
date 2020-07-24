@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         view.addGestureRecognizer(tap)
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -47,10 +47,14 @@ class ViewController: UIViewController {
                 doc.getDocument { (document, error) in
                     // transition to screen
                     let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
+                    vc.email = email
                     vc.modalPresentationStyle = .fullScreen
                     vc.finalCharacterName = document?.get("characterName") as? String
                     vc.finalCharacter = UIImage(named: (document?.get("character") as? String)!)
                     vc.finalCharacterType = document?.get("character") as? String
+                    vc.accumulatedCalories = document?.get("calories") as! Int
+                    vc.wallet = document?.get("wallet") as! Double
+                    vc.progress = (document?.get("progress") as! Double) 
                     self.present(vc, animated: true)
                 }
             }

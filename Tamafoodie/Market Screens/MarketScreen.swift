@@ -10,7 +10,16 @@ import UIKit
 
 class MarketScreen: UIViewController {
     var Character: UIImage!
-    var CharacterName:  String!
+    var CharacterName: String!
+
+    var calories = 0 // no. of calories of food just eaten
+    var hunger = 0 // to change hunger bar
+    
+    // Data passing
+    var email: String!
+    var accumulatedCalories = 0 // passed from main screen
+    var wallet = 0.0
+    var progress = 0.0
     
     @IBOutlet weak var buttonStack: UIStackView!
     var foodArray = [
@@ -95,14 +104,22 @@ class MarketScreen: UIViewController {
     }()
     
      @objc func didTapDone() {
-            // transition to next screen
-            let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
-            vc.modalPresentationStyle = .fullScreen
-            vc.modalTransitionStyle = .coverVertical
+        // transition to next screen
+        let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
-            present(vc, animated: true)
-        }
+        vc.calories = hunger
+        vc.otherOngoing = true
+        vc.shouldIncrease = false
+        
+        vc.email = self.email!
+        vc.accumulatedCalories = self.accumulatedCalories
+        vc.progress = self.progress
+        vc.wallet = self.wallet
+        present(vc, animated: true)
+    }
     
     @IBAction func buttonAction(sender: UIButton!) {
         view.addSubview(visualEffectView)
@@ -118,15 +135,9 @@ class MarketScreen: UIViewController {
         view.addSubview(imageView)
         view.addSubview(textView)
         view.addSubview(doneButton)
-        
-        let vc = (self.storyboard?.instantiateViewController(identifier: "Main Screen"))! as MainScreen
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .coverVertical
-        vc.finalCharacter = self.Character
-        vc.finalCharacterName = self.CharacterName
-        vc.calories = (self.foodArray[sender.tag][1] as! Int) / 10 // divide by 10 to make calories more proportional to hunger bar length
-        vc.otherOngoing = true
-        vc.shouldIncrease = false
+        calories = self.foodArray[sender.tag][1] as! Int
+        self.accumulatedCalories += calories
+        hunger = calories / 10 // divide by 10 to make calories more proportional to hunger bar length
     }
     
     @IBAction func backPressed(_ sender: Any) {
@@ -135,9 +146,10 @@ class MarketScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
-        // i removed the cal part cus if we were to go back there should be any changes to calories right?
-        vc.otherOngoing = true
-        vc.shouldIncrease = false
+        vc.email = self.email!
+        vc.accumulatedCalories = self.accumulatedCalories
+        vc.progress = self.progress
+        vc.wallet = self.wallet
         present(vc, animated: true)
     }
 }
