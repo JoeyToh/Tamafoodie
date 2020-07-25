@@ -250,7 +250,7 @@ class VetScreen: UIViewController {
         yesButton.removeFromSuperview()
         noButton.removeFromSuperview()
         
-        if wallet >= 20 {
+        if wallet >= 30 {
             view.addSubview(enoughMoneyMsg)
             view.addSubview(enoughMoneyButton)
         } else {

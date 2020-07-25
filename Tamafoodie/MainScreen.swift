@@ -42,6 +42,34 @@ class MainScreen: UIViewController {
         walletLabel.text = "\(Int(wallet))"
         
         // Data passing
+        if self.accumulatedCalories < 1000 {
+            if finalCharacterType == "hamster" {
+                finalCharacter = UIImage(named: "hamster")
+                print("ham")
+            } else if finalCharacterType == "bunny" {
+                finalCharacter = UIImage(named: "bunny")
+            } else if finalCharacterType == "dog" {
+                finalCharacter = UIImage(named: "dog")
+            } else if finalCharacterType == "og tama" {
+                finalCharacter = UIImage(named: "og tama")
+            } else {
+                // error
+            }
+        } else {
+            if finalCharacterType == "hamster" {
+                finalCharacter = UIImage(named: "fat hamster")
+                print("fat")
+            } else if finalCharacterType == "bunny" {
+                finalCharacter = UIImage(named: "bunny")
+            } else if finalCharacterType == "dog" {
+                finalCharacter = UIImage(named: "fat dog")
+            } else if finalCharacterType == "og tama" {
+                finalCharacter = UIImage(named: "fat og tama")
+            } else {
+                // error
+            }
+        }
+        
         character.image = finalCharacter
         characterName.text = finalCharacterName
         
