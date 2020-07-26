@@ -13,6 +13,7 @@ class VetScreen: UIViewController {
     @IBOutlet weak var finalCharacter: UIImageView!
     var character: UIImage!
     var characterName: String!
+    var characterType: String!
     
     // Keep track
     var email: String!
@@ -154,6 +155,7 @@ class VetScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
+        vc.finalCharacterType = self.characterType
         vc.email = self.email!
         vc.accumulatedCalories = self.accumulatedCalories
         vc.progress = self.progress
@@ -267,6 +269,7 @@ class VetScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
+        vc.finalCharacterType = self.characterType
         vc.email = self.email!
         vc.accumulatedCalories = self.accumulatedCalories
         vc.progress = self.progress
@@ -298,6 +301,7 @@ class VetScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.character
         vc.finalCharacterName = self.characterName
+        vc.finalCharacterType = self.characterType
         vc.email = self.email!
         vc.accumulatedCalories = self.accumulatedCalories
         vc.progress = self.progress

@@ -11,6 +11,7 @@ import UIKit
 class MarketScreen: UIViewController {
     var Character: UIImage!
     var CharacterName: String!
+    var CharacterType: String!
 
     var calories = 0 // no. of calories of food just eaten
     var hunger = 0 // to change hunger bar
@@ -110,6 +111,7 @@ class MarketScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
+        vc.finalCharacterType = self.CharacterType
         vc.calories = hunger
         vc.otherOngoing = true
         vc.shouldIncrease = false
@@ -146,6 +148,7 @@ class MarketScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
+        vc.finalCharacterType = self.CharacterType
         vc.email = self.email!
         vc.accumulatedCalories = self.accumulatedCalories
         vc.progress = self.progress

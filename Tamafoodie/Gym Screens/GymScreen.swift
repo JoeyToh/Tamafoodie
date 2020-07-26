@@ -105,7 +105,7 @@ class GymScreen: UIViewController {
             let timeInput: Int? = Int(textFieldView.text ?? "0")
             caloriesBurntLabel.text = "\(runCaloriesBurnt(time: timeInput ?? 0)) calories burnt!"
             
-            self.calories = timeInput ?? 0 // just help to update amt of calories burnt here
+            self.calories = runCaloriesBurnt(time: timeInput ?? 0) // just help to update amt of calories burnt here
             self.accumulatedCalories -= calories
             hunger = calories / 5 // can adjust denominator to make hunger increase more proportionately
             
@@ -121,7 +121,7 @@ class GymScreen: UIViewController {
             let timeInput: Int? = Int(textFieldView.text ?? "0")
             caloriesBurntLabel.text = "\(liftCaloriesBurnt(time: timeInput ?? 0)) calories burnt!"
             
-            self.calories = timeInput ?? 0 // just help to update amt of calories burnt here
+            self.calories = liftCaloriesBurnt(time: timeInput ?? 0) // just help to update amt of calories burnt here
             self.accumulatedCalories -= calories
             hunger = calories / 5 // can adjust denominator to make hunger increase more proportionately
             
@@ -137,7 +137,7 @@ class GymScreen: UIViewController {
                 let timeInput: Int? = Int(textFieldView.text ?? "0")
                 caloriesBurntLabel.text = "\(runCaloriesBurnt(time: timeInput ?? 0)) calories burnt!"
                 
-                self.calories = timeInput ?? 0 // just help to update amt of calories burnt here
+                self.calories = runCaloriesBurnt(time: timeInput ?? 0) // just help to update amt of calories burnt here
                 self.accumulatedCalories -= calories
                 hunger = calories / 5 // can adjust denominator to make hunger increase more proportionately
                 
@@ -152,7 +152,7 @@ class GymScreen: UIViewController {
                 let timeInput: Int? = Int(textFieldView.text ?? "0")
                 caloriesBurntLabel.text = "\(liftCaloriesBurnt(time: timeInput ?? 0)) calories burnt!"
                 
-                self.calories = timeInput ?? 0 // just help to update amt of calories burnt here
+                self.calories = liftCaloriesBurnt(time: timeInput ?? 0) // just help to update amt of calories burnt here
                 self.accumulatedCalories -= calories
                 hunger = calories / 5 // can adjust denominator to make hunger increase more proportionately
                 
@@ -167,7 +167,7 @@ class GymScreen: UIViewController {
     }
     
     func runCaloriesBurnt(time: Int) -> Int {
-        return Int(66.3314 * (Double(time) / 4.184))
+        return Int(69.14066 * (Double(time) / 4.184))
     }
     
     func liftCaloriesBurnt(time: Int) -> Int {
@@ -246,6 +246,7 @@ class GymScreen: UIViewController {
         vc.modalTransitionStyle = .coverVertical
         vc.finalCharacter = self.Character
         vc.finalCharacterName = self.CharacterName
+        vc.finalCharacterType = self.CharacterType
         
         vc.calories = hunger
         vc.otherOngoing = true

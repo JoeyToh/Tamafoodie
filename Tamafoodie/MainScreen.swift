@@ -96,6 +96,7 @@ class MainScreen: UIViewController {
         vet.modalPresentationStyle = .fullScreen
         vet.characterName = self.finalCharacterName
         vet.character = self.finalCharacter
+        vet.characterType = self.finalCharacterType
         vet.email = self.email!
         vet.accumulatedCalories = self.accumulatedCalories
         vet.wallet = self.wallet
@@ -108,6 +109,7 @@ class MainScreen: UIViewController {
         mkt.modalPresentationStyle = .fullScreen
         mkt.CharacterName = self.finalCharacterName
         mkt.Character = self.finalCharacter
+        mkt.CharacterType = self.finalCharacterType
         mkt.email = self.email!
         mkt.accumulatedCalories = self.accumulatedCalories
         mkt.wallet = self.wallet
